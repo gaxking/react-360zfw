@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="public/css/style.css" />
+	    <script type="text/javascript" src="http://res.360zfw.com/Public/web/js/jquery.min.js"></script>
+		<script src="http://res.360zfw.com/Public/web/js/bjqs-1.3.min.js"></script>
+
+		<script>
+			var CONFIG = {};
+			CONFIG['apiUrl'] = 'http://www.360zfw.com/api/';
+		</script>
+	</head>
+	<body>
+		<header>
+			<div class="header-box">
+				<div class="location">
+					<em></em>广州
+				</div>
+
+				<div class="warp-sign fr">
+					<a id="userlogin" onclick="pw_login()" class="login">登录</a>
+					<a id="usersign" onclick="pw_signup()">注册</a>
+					<span id="userinfo" style="display:none; width:auto; height:auto; margin-top:0;background-color:#fcfcfc;"></span>
+					<a onclick="pw_loginout()" id="loginout" style="display:none;">退出</a>
+					<a id="usercenter" href="http://www.360zfw.com/ucenter" style="display:none;">个人中心</a>
+					<span></span>
+					<a href="http://www.360zfw.com/introduce">360服务</a>
+					<span></span>
+					<a href="http://www.360zfw.com/qa">常见问题</a>                
+					<span></span>
+					<a href="http://www.360zfw.com/cooperative">合作品牌</a>
+					<span></span>
+					<em>咨询热线：4006-360-749</em>
+				</div>
+			</div>
+		</header>
+		<nav>
+			<div class="nav-box">
+				<a class="nav-logo" href="/"></a>
+				<div class="nav-list fr">
+					<div>
+						<a class="active" href="/">首页</a>
+					</div>
+					<div>
+						<a href="/">
+							软装套餐<span class="drop-caret"></span>
+						</a>
+						<ul>
+							<li><a href="">现代简约 - 活力系</a></li>
+							<li><a href="">现代简约 - 成熟系</a><span class="new" ></span></a></li>
+						</ul>
+					</div>
+
+					<div>
+						<a href="/">
+							整屋装修<span class="drop-caret"></span>
+						</a>
+						<ul>
+							<li><a href="">现代简约 - 活力</a></li>
+							<li><a href="">现代简约 - 成熟系</a></li>
+							<li><a href="">品调原</a></li>
+							<li><a href="">欧陆风情</a></li> 
+						</ul>
+					</div>
+					<div>
+						<a href="/">
+							局部装修<span class="drop-caret"></span>
+						</a>
+						<ul>
+							<li><a href="">精装升级</a></li>
+							<li><a href="">二手改造</a></li>
+						</ul>
+					</div>
+					<div>
+						<a href="/">
+							合伙加盟<span class="drop-caret"></span>
+							<ul>
+								<li><a href="">城市合伙</a></li>
+								<li><a href="">社区合伙</a></li>
+							</ul>
+						</a>
+					</div>
+					<div>
+						<a href="loan"><span>装修贷款</span></a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="intro-index">
+			<div class="intro-index-box">
+				<div class="mc-top">
+					<div class="mct-left">
+						<div class="mctl-top">
+							<h1>360装房网做什么？</h1>
+							<p>360装房提供设计、选材、施工、监工的一站式装修服务，做最省心的装房管家！</p>
+						</div>
+						<div class="mctl-mid">
+							<em></em>
+							<span>省50%</span>
+							<p>省时省力省钱省心，全新互联网装修体验，告别行业脏乱差。</p>
+						</div>
+						<div class="mctl-bot">
+							<em></em>
+							<span>快50%</span>
+							<p>上门快报价快入场快，因为透明所以高效，科学施工质量保证。</p>
+						</div>
+					</div>
+					<div class="mct-banner">
+						<div id="banner-fade">
+							<ul class="bjqs">
+								<li>
+								<a href="http://www.360zfw.com/home/index/monkeyYear" target="_blank">
+									<img src="http://res.360zfw.com/upload/carousel/20160129/56ab1596b3883.jpg" alt="" style="height: 348px;width: 100%;" >
+								</a>
+								</li><li>
+								<a href="http://www.360zfw.com/design/7" target="_blank">
+									<img src="http://res.360zfw.com/upload/carousel/20151221/56775037afe10.png" alt="" style="height: 348px;width: 100%;" >
+								</a>
+								</li><li>
+								<a href="http://www.360zfw.com/loan" target="_blank">
+									<img src="http://res.360zfw.com/upload/carousel/20151203/56601fa02eb1f.jpg" alt="" style="height: 348px;width: 100%;" >
+								</a>
+								</li><li>
+								<a href="http://www.360zfw.com/home/index/cityList" target="_blank">
+									<img src="http://res.360zfw.com/upload/carousel/20160111/56938bee4f572.jpg" alt="" style="height: 348px;width: 100%;" >
+								</a>
+								</li><li>
+								<a href="http://www.360zfw.com/jinzhuang?from=lb" target="_blank">
+									<img src="http://res.360zfw.com/upload/carousel/20151105/563b3e447c686.jpg" alt="" style="height: 348px;width: 100%;" >
+								</a>
+								</li><li>
+								<a href="http://www.360zfw.com/softoutfitb?from=lb" target="_blank">
+									<img src="http://res.360zfw.com/upload/carousel/20151105/563b3cc1ac8df.jpg" alt="" style="height: 348px;width: 100%;" >
+								</a>
+								</li>	
+							</ul>
+							<script class="secret-source">
+								jQuery(document).ready(function($) {
+								$('#banner-fade').bjqs({
+										height      : 348,
+										width       : 681,
+										responsive  : true,
+										showmarkers : false,
+										nexttext    : '＞',
+										prevtext    : '＜'
+									});
+								});
+							</script>
+						</div>
+					</div>
+
+					<div id="indexOrder" class="mct-right">
+					</div>
+				</div>
+				<div class="mc-introduction">
+					<div class="mci-title">业主权益第一，装房网始终保障业主装修的每一步</div>
+					<ul>
+						<li class="mci-jumei"></li>
+						<li class="mci-pinzhi"></li>
+						<li class="mci-tiyan"></li>
+						<li class="mci-touming"></li>
+					</ul>
+					<div class="clr"></div>
+				</div>
+			</div>
+		</div>
+		<div class="oneservice"></div>
+		<div class="infor_nav"></div>
+		<div class="freedesign"></div>
+		<div class="onlinedesign">
+			<link href="http://360zfw-resource.oss-cn-shenzhen.aliyuncs.com/video.css" rel="stylesheet" type="text/css">		
+			<div class="onlinevideo" style="position:relative; width:960px; height:716px; margin:0 auto;">
+				<div class="video-positon">
+					<div id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered vjs-paused vjs-controls-enabled vjs-user-inactive" style="width: 359px; height: 210px;"><video id="example_video_1_html5_api" class="vjs-tech" preload="none" poster="http://res.360zfw.com/Public/web/imgs/videobg.jpg" data-setup="{}" src="http://res.360zfw.com/Public/web/video/zfw.mp4">
+							<source src="http://res.360zfw.com/Public/web/video/zfw.mp4" type="video/mp4">
+							<source src="http://res.360zfw.com/Public/web/video/zfw.ogv" type="video/ogg">
+					</video><div></div><div class="vjs-poster" tabindex="-1" style="background-image: url(&quot;http://res.360zfw.com/Public/web/imgs/videobg.jpg&quot;);"></div><div class="vjs-text-track-display"></div><div class="vjs-loading-spinner"></div><div class="vjs-big-play-button" role="button" aria-live="polite" tabindex="0" aria-label="play video"><span aria-hidden="true"></span></div><div class="vjs-control-bar"><div class="vjs-play-control vjs-control " role="button" aria-live="polite" tabindex="0"><div class="vjs-control-content"><span class="vjs-control-text">Play</span></div></div><div class="vjs-current-time vjs-time-controls vjs-control"><div class="vjs-current-time-display" aria-live="off"><span class="vjs-control-text">Current Time </span>0:00</div></div><div class="vjs-time-divider"><div><span>/</span></div></div><div class="vjs-duration vjs-time-controls vjs-control"><div class="vjs-duration-display" aria-live="off"><span class="vjs-control-text">Duration Time </span>0:00</div></div><div class="vjs-remaining-time vjs-time-controls vjs-control"><div class="vjs-remaining-time-display" aria-live="off"><span class="vjs-control-text">Remaining Time </span>-0:00</div></div><div class="vjs-progress-control vjs-control"><div role="slider" aria-valuenow="NaN" aria-valuemin="0" aria-valuemax="100" tabindex="0" class="vjs-progress-holder vjs-slider" aria-label="video progress bar" aria-valuetext="0:00"><div class="vjs-load-progress"><span class="vjs-control-text">Loaded: 0%</span></div><div class="vjs-play-progress" style="width: 0%;"><span class="vjs-control-text">Progress: 0%</span></div><div class="vjs-seek-handle vjs-slider-handle" aria-live="off" style="left: 0%;"><span class="vjs-control-text">00:00</span></div></div></div><div class="vjs-fullscreen-control vjs-control " role="button" aria-live="polite" tabindex="0"><div class="vjs-control-content"><span class="vjs-control-text">Fullscreen</span></div></div><div class="vjs-volume-control vjs-control"><div role="slider" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" tabindex="0" class="vjs-volume-bar vjs-slider" aria-label="volume level" aria-valuetext="100%"><div class="vjs-volume-level" style="width: 100%;"><span class="vjs-control-text"></span></div><div class="vjs-volume-handle vjs-slider-handle" style="left: 100%;"><span class="vjs-control-text">00:00</span></div></div></div><div class="vjs-mute-control vjs-control" role="button" aria-live="polite" tabindex="0"><div><span class="vjs-control-text">Mute</span></div></div><div class="vjs-subtitles-button vjs-menu-button vjs-control " role="button" aria-live="polite" tabindex="0" aria-haspopup="true" aria-label="Subtitles Menu" style="display: none;"><div class="vjs-control-content"><span class="vjs-control-text">Subtitles</span></div><div class="vjs-menu"><ul class="vjs-menu-content"><li class="vjs-menu-item vjs-selected" role="button" aria-live="polite" tabindex="0" aria-selected="true">subtitles off</li></ul></div></div><div class="vjs-captions-button vjs-menu-button vjs-control " role="button" aria-live="polite" tabindex="0" aria-haspopup="true" aria-label="Captions Menu" style="display: none;"><div class="vjs-control-content"><span class="vjs-control-text">Captions</span></div><div class="vjs-menu"><ul class="vjs-menu-content"><li class="vjs-menu-item vjs-selected" role="button" aria-live="polite" tabindex="0" aria-selected="true">captions off</li></ul></div></div><div class="vjs-chapters-button vjs-menu-button vjs-control " role="button" aria-live="polite" tabindex="0" aria-haspopup="true" aria-label="Chapters Menu" style="display: none;"><div class="vjs-control-content"><span class="vjs-control-text">Chapters</span></div><div class="vjs-menu"><ul class="vjs-menu-content"></ul><li class="vjs-menu-title">Chapters</li></div></div></div></div>
+				</div>
+				<a id="v_control" style="width:127px; height:27px; position: absolute; left: 788px; bottom: 145px; cursor: pointer;"></a>
+				<script src="http://res.360zfw.com/Public/web/js/video.js"></script>
+				<script type="text/javascript">
+				/*var myPlayer = _V_("example_video_1");
+				$("#v_control").click(function(){
+					myPlayer.play();
+				});*/
+				</script>
+			</div>
+		</div>
+
+		<!--合作品牌-->
+		<div class="cobrand">
+			<div class="cobrand-list">
+				<a class="cbl-liban"></a>
+				<a class="cbl-sch"></a>
+				<a class="cbl-nvc"></a>
+				<a class="cbl-rebon"></a>
+				<a class="cbl-tata"></a>
+				<a class="cbl-sofei"></a>
+				<a class="cbl-make"></a>
+				<a class="cbl-toto"></a>
+				<a class="cbl-lesso"></a>
+				<a class="cbl-nature"></a>
+				<a class="cbl-philips"></a>
+				<a class="cbl-dp"></a>
+				<a class="cbl-boln"></a>
+			</div>
+		</div>
+
+		<div class="clr"></div>
+		<div class="gongren"></div>
+		<div class="guanjia"></div>
+		<div class="break"></div>
+		<div class="shouhou"></div>
+		<div class="service_bg">
+			<div class="service">
+				<div class="ser-title">
+					<p class="st-m">360服务保障</p>
+					<p class="st-s">SERVICE GUARANTEE</p>
+				</div>
+				<div class="ser-list">
+					<img src="http://res.360zfw.com/Public/web/imgs/beta2/service.jpg?v=1">
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="footer-content">
+				<p class="fc-p1">
+				<a href="http://www.360zfw.com/joinus">关于我们</a>
+				<span>|</span>
+				<a href="http://www.360zfw.com/joinus">联系我们</a>
+				<span>|</span>
+				<a href="http://www.360zfw.com/download">下载中心</a>
+				<span>|</span>
+				<a href="http://www.360zfw.com/qa">帮助中心</a>
+				</p>
+				<p style="margin:20px 0 5px 0;"><img style="width:100px; height:100px;" src="http://res.360zfw.com/Public/web/imgs/ma2.jpg" alt="装房网,装房网家装,广州装房网,360装房,家装O2O,互联网家装,互联网装修,装房管家,love360zfw,360zfw,360装房网官网,360装房网"></p>
+				<p style="color:#666;">360装房网官方微信</p>
+				<p class="fc-p2">© 360zfw.com 360装房网-华南首家O2O互联网家装企业 All Rights Reserved</p>
+				<p style="color:#666; margin-top:5px;">粤ICP备<a href="http://www.miitbeian.gov.cn/" target="_blank" style="color:#666;">14099845-1号</a></p>
+				<div style="display: none;"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253986763'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1253986763%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script><span id="cnzz_stat_icon_1253986763"><a href="http://www.cnzz.com/stat/website.php?web_id=1253986763" target="_blank" title="站长统计"><img border="0" hspace="0" vspace="0" src="http://icon.cnzz.com/img/pic.gif"></a></span><script src=" http://s11.cnzz.com/z_stat.php?id=1253986763&amp;show=pic" type="text/javascript"></script><script src="http://c.cnzz.com/core.php?web_id=1253986763&amp;show=pic&amp;t=z" charset="utf-8" type="text/javascript"></script></div>
+			</div>
+			<div id="popwindow"></div>
+		</footer>
+	</body>
+	<script src="public/js/bundle.js"></script>
+	<script src="public/js/jquery.reveal.js"></script>
+</html>

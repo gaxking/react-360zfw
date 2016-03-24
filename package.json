@@ -1,0 +1,39 @@
+{
+  "name": "zfw-react-project",
+  "version": "0.1.0",
+  "devDependencies": {
+    "browserify": "*",
+    "reactify": "*",
+    "react": "*",
+    "react-dom": "*",
+    "uglify-js": "*",
+    "watchify": "*",
+    "webpack": "*",
+    "url-loader": "*",
+    "jsx-loader": "*",
+    "style-loader": "*",
+    "css-loader": "*",
+    "file-loader": "*",
+    "gulp-less": "*",
+    "classnames": "*",
+    "react-addons-css-transition-group": "*",
+    "fbemitter": "*",
+    "node-jsx": "*"
+  },
+  "scripts": {
+    "build": "browserify --debug index.js > bundle.js",
+    "watch": "watchify --debug build/main.js -o lib/bundle.js -v",
+    "webpack": "webpack --watch",
+    "less": "gulp watch"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "dependencies": {
+    "babel-core": "^6.7.2",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0"
+  }
+}
